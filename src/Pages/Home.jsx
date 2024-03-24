@@ -1,11 +1,11 @@
-import Navbar from "../Components/Navbar";
-
+import Hero from "../Components/Hero";
+import wave from '../assets/wave.svg'
 const Home = () => {
     return (
-        <div>
-            <Navbar />
-            <h1>home page</h1>
-        </div>
+        <>
+            <Hero />
+            <img className="absolute bottom-0 w-full" src={wave} alt="" />
+        </>
     );
 };
 
