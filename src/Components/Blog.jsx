@@ -1,12 +1,14 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import notImg from '../assets/404.jpg'
+import { BsBookmarkXFill } from "react-icons/bs";
 
-const Blog = ({ blog }) => {
-  //console.log(blog);
+
+const Blog = ({ blog, deletable, handleDeleteBookmark }) => {
   const { id, cover_image, title, description, created_at } = blog;
+  
   return (
-    <>
+    <div className="flex relative">
       <Link
         rel="noopener noreferrer"
         to={`/blogs/${id}`}
@@ -34,7 +36,14 @@ const Blog = ({ blog }) => {
           <p>{description}</p>
         </div>
       </Link>
-    </>
+      {
+        deletable && <div 
+        onClick={()=> {
+          handleDeleteBookmark(id);
+        }}
+        className="absolute bg-red-600 rounded-full p-3 -right-3 -top-3 cursor-pointer"><BsBookmarkXFill /></div>
+      }
+    </div>
   );
 };
 

@@ -3,11 +3,11 @@ import { useLoaderData } from "react-router-dom";
 
 const Author = () => {
   const author = useLoaderData();
-  console.log(author.user);
-  const { name, profile_image_90, website_url } = author.user;
+  //console.log(author.user);
+  const { username,name, profile_image_90 } = author.user;
 
   return (
-    <div className="flex flex-col justify-center max-w-xs p-6 shadow-md rounded-xl sm:px-12 dark:bg-gray-50 dark:text-gray-800">
+    <div className="flex w-full flex-col justify-center max-w-xs p-6 shadow-md rounded-xl sm:px-12 bg-gray-50 dark:text-gray-800">
       <img
         src={profile_image_90}
         alt=""
@@ -17,7 +17,7 @@ const Author = () => {
         <div className="my-2 space-y-1">
           <h2 className="text-xl font-semibold sm:text-2xl">{name}</h2>
           <p className="px-5 text-xs sm:text-base dark:text-gray-600">
-            Full-stack developer
+            Username: {username}
           </p>
         </div>
         <div className="flex justify-center pt-2 space-x-4 align-center">

@@ -8,7 +8,7 @@ const MainLayout = () => (
             <Navbar />
         </div>
         {/* packet of home, blogs, bookmark  */}
-        <div  className="min-h-[calc(100vh-116px)] flex my-12">
+        <div  className="min-h-[calc(100vh-160px)] flex my-12">
         <Outlet />
         </div>
         <Footer />

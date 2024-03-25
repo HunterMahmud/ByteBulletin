@@ -16,7 +16,7 @@ const BlogDetails = () => {
     published_at,
     reading_time_minutes,
   } = blogDetails;
-  //console.log(blogDetails);
+
   const handleBookmark = (blog) => {
     saveToLocalStorage(blog);
   }
@@ -46,8 +46,9 @@ const BlogDetails = () => {
             </p>
           </div>
           <div className="flex flex-wrap py-6 gap-2 border-t border-dashed dark:border-gray-600">
-          {tags.map((tag) => (
+          {tags.map((tag,i) => (
             <a
+            key={i}
               rel="noopener noreferrer"
               href="#"
               className="px-3 py-1 rounded-sm hover:underline dark:bg-violet-600 dark:text-gray-50"
@@ -100,7 +101,7 @@ const BlogDetails = () => {
               </svg>
               <span>Author</span>
             </Link>
-            <div onClick={()=>handleBookmark(blogDetails)}>
+            <div className="ml-4 bg-pink-500 p-3 rounded-full cursor-pointer" onClick={()=>handleBookmark(blogDetails)}>
             <MdBookmarkAdd />
             </div>
           </div>
@@ -108,7 +109,7 @@ const BlogDetails = () => {
       </article>
       <div>
        
-        <div>
+        <div className="flex flex-col items-center justify-center">
           <Outlet />
         </div>
         
