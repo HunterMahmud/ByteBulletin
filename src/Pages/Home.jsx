@@ -4,7 +4,7 @@ const Home = () => {
     return (
         <>
             <Hero />
-            <img className="absolute bottom-0 w-full" src={wave} alt="" />
+            <img className="absolute bottom-0 h-[300px] w-full" src={wave} alt="" />
         </>
     );
 };

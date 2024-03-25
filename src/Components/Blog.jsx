@@ -8,15 +8,15 @@ const Blog = ({ blog, deletable, handleDeleteBookmark }) => {
   const { id, cover_image, title, description, created_at } = blog;
   
   return (
-    <div className="flex relative">
+    <div className="flex relative border duration-300 border-sky-900 p-2 rounded-lg hover:border-2 hover:border-sky-100 hover:scale-105">
       <Link
         rel="noopener noreferrer"
         to={`/blogs/${id}`}
-        className="max-w-sm mx-auto group hover:no-underline focus:no-underline light:bg-gray-900"
+        className="max-w-sm mx-auto group hover:no-underline focus:no-underline "
       >
         <img
           role="presentation"
-          className="object-cover w-full rounded h-44 light:bg-gray-500"
+          className="object-cover w-full rounded h-44"
           src={cover_image || notImg}
         />
         <div className="p-6 space-y-2">

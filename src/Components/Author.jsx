@@ -7,16 +7,16 @@ const Author = () => {
   const { username,name, profile_image_90 } = author.user;
 
   return (
-    <div className="flex w-full flex-col justify-center max-w-xs p-6 shadow-md rounded-xl sm:px-12 bg-gray-50 dark:text-gray-800">
+    <div className="flex w-full flex-col justify-center max-w-xs p-6 shadow-md rounded-xl sm:px-12">
       <img
         src={profile_image_90}
         alt=""
-        className="w-32 h-32 mx-auto rounded-full dark:bg-gray-500 aspect-square"
+        className="w-32 h-32 mx-auto rounded-full  aspect-square"
       />
-      <div className="space-y-4 text-center divide-y dark:divide-gray-300">
+      <div className="space-y-4 text-center divide-y ">
         <div className="my-2 space-y-1">
           <h2 className="text-xl font-semibold sm:text-2xl">{name}</h2>
-          <p className="px-5 text-xs sm:text-base dark:text-gray-600">
+          <p className="px-5 text-xs sm:text-base ">
             Username: {username}
           </p>
         </div>
@@ -25,7 +25,7 @@ const Author = () => {
             rel="noopener noreferrer"
             href="#"
             aria-label="GitHub"
-            className="p-2 rounded-md dark:text-gray-800 hover:dark:text-violet-600"
+            className="p-2 rounded-md "
           >
             <svg
               viewBox="0 0 496 512"
@@ -40,7 +40,7 @@ const Author = () => {
             rel="noopener noreferrer"
             href="#"
             aria-label="Twitter"
-            className="p-2 rounded-md dark:text-gray-800 hover:dark:text-violet-600"
+            className="p-2 rounded-md "
           >
             <svg
               viewBox="0 0 512 512"
@@ -54,7 +54,7 @@ const Author = () => {
             rel="noopener noreferrer"
             href="#"
             aria-label="Email"
-            className="p-2 rounded-md dark:text-gray-800 hover:dark:text-violet-600"
+            className="p-2 rounded-md "
           >
             <svg
               viewBox="0 0 512 512"

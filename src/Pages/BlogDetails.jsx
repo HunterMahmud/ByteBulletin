@@ -21,14 +21,14 @@ const BlogDetails = () => {
     saveToLocalStorage(blog);
   }
   return (
-    <div className="flex flex-col p-6 space-y-6 overflow-hidden rounded-lg w-full max-w-3xl shadow-md dark:bg-gray-50 dark:text-gray-800 mx-auto">
-      <article className="space-y-8 dark:bg-gray-100 dark:text-gray-900">
+    <div className="flex flex-col p-6 space-y-6 overflow-hidden rounded-lg w-full max-w-3xl shadow-md mx-auto">
+      <article className="space-y-8">
         <div className="space-y-6">
         <img src={cover_image} alt="" />
           <h1 className="text-4xl font-bold md:tracking-tight md:text-5xl">
             {title}
           </h1>
-          <div className="flex flex-col items-start justify-between w-full md:flex-row md:items-center dark:text-gray-600">
+          <div className="flex flex-col items-start justify-between w-full md:flex-row md:items-center">
             <div className="flex items-center md:space-x-2">
               <p className="text-sm">
               {reading_time_minutes} min read • {new Date(published_at).toLocaleDateString("en-US", {
@@ -45,25 +45,25 @@ const BlogDetails = () => {
          {comments_count} Comments • {public_reactions_count} views
             </p>
           </div>
-          <div className="flex flex-wrap py-6 gap-2 border-t border-dashed dark:border-gray-600">
+          <div className="flex flex-wrap py-6 gap-2 border-t border-dashed ">
           {tags.map((tag,i) => (
             <a
             key={i}
               rel="noopener noreferrer"
               href="#"
-              className="px-3 py-1 rounded-sm hover:underline dark:bg-violet-600 dark:text-gray-50"
+              className="px-3 py-1 rounded-sm hover:underline"
             >
               #{tag}
             </a>
           ))}
         </div>
-          <div className="flex items-center -mx-4 overflow-x-auto overflow-y-hidden sm:justify-start flex-nowrap dark:bg-gray-100 dark:text-gray-800">
+          <div className="flex items-center -mx-4 overflow-x-auto overflow-y-hidden sm:justify-start flex-nowrap">
             <Link
               onClick={() => setCurrentTab(0)}
               to=""
               className={`flex items-center flex-shrink-0 px-5 py-3 space-x-2 ${
                 currentTab === 0 ? "border border-b-0 rounded-t-lg" : "border-b"
-              } dark:border-gray-600 dark:text-gray-600`}
+              } `}
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -84,7 +84,7 @@ const BlogDetails = () => {
               to={`author`}
               className={`flex items-center flex-shrink-0 px-5 py-3 space-x-2 ${
                 currentTab === 1 ? "border border-b-0 rounded-t-lg" : "border-b"
-              } dark:border-gray-600 dark:text-gray-600`}
+              }`}
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
